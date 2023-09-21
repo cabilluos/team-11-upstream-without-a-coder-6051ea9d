@@ -1,7 +1,12 @@
 package com.levelup.forestsandmonsters;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
+//import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+
 import org.junit.Test;
+
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
 
 public class GameControllerTest {
     @Test
@@ -9,5 +14,14 @@ public class GameControllerTest {
         GameController testObj = new GameController();
         assertNotNull(testObj.status);
     }
+    @Test
+    public void moveCallCharactersMove() {
+        GameController testObj = new GameController();
+        FakeCharacter mockCharacter = new FakeCharacter();
+        testObj.character = mockCharacter;
 
+        testObj.move(DIRECTION.EAST);
+
+        assertEquals(DIRECTION.EAST, mockCharacter.directionProvided);
+    }
 }

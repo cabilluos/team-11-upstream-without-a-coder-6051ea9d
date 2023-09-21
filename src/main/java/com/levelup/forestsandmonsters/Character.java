@@ -4,7 +4,7 @@ import com.levelup.forestsandmonsters.GameController;
 
 public class Character {
 
-    public static final String DEFAULT_NAME = "Bob";
+    public static String DEFAULT_NAME = "Bob";
     String name;
     Position currentPosition; 
 

@@ -3,15 +3,15 @@ package com.levelup.forestsandmonsters;
 import java.awt.Point;
 
 public class GameController {
-
+    Character character;
     static final String DEFAULT_CHARACTER_NAME = "Character";
 
     public class GameStatus {
         // TODO: Add other status data
-        public String characterName = DEFAULT_CHARACTER_NAME;
-        public Point currentPosition = null;
+        public String characterName;
+        public Point currentPosition;
         // TODO: Write a failing unit test that will force you to set this to the right number
-        public int moveCount = -100;
+        public int moveCount;
     }
 
     GameStatus status;
