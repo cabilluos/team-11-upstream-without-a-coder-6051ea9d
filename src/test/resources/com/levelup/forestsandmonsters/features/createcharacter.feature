@@ -1,5 +1,5 @@
 Feature: CreateCharacter
-![Gamer](images/gamerErin.png)
+![Gamer](images/playerTomSawyer.png)
 
 I want to create a new custom character, setting only their name.
 This split is VERY simple: the only customization is setting the name.
