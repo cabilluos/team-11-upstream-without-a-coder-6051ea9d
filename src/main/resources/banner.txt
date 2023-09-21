@@ -8,6 +8,10 @@
 -------------------------------------------------------------
 Up a Creek without a Paddle
 -------------------------------------------------------------
+You are about to embark on an endless voyage across the smallest pond.
+During your journey you will imagine all sorts of interesting stories.
+Take your time exploring as time is just a number.
+-------------------------------------------------------------
 type 'help' to see a list of commands
 -------------------------------------------------------------
 Enter 'create {NAME}' to create a character with a custom name. 
