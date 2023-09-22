@@ -48,6 +48,11 @@ public class GameController {
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
         // TODO: Should probably also update the game results
+        character.move(directionToMove);
+        this.status.currentPosition = character.getPosition().coordinates;
+        this.status.moveCount = character.getMoveCount();
+        }
+
     }
 
     public void setCharacterPosition(Point coordinates) {
