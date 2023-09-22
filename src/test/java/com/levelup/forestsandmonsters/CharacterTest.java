@@ -13,27 +13,29 @@ public class CharacterTest {
 
     @Test
     public void InitializeNamedCharacter() {
-        String s = new String("Erin");
-        Character testObj = new Character(s);
-        assertEquals(s,testObj.getName());
+        String defaultCharacter = new String("Erin");
+        Character testObj = new Character(defaultCharacter);
+        assertEquals(defaultCharacter,testObj.getName());
     }
 
     @Test
     public void setPositionTest() {
-        int x = 4;
-        int y = 5;
+        int arbitrary_posX = 4;
+        int arbitrary_posY = 5;
         Character testObj = new Character();
-        testObj.setPosition(x,y);
-        assertEquals(4, testObj.currentPosition.coordinates.x);
-        assertEquals(5, testObj.currentPosition.coordinates.y);
+        testObj.setPosition(arbitrary_posX,arbitrary_posY);
+        assertEquals(arbitrary_posX, testObj.currentPosition.coordinates.x);
+        assertEquals(arbitrary_posY, testObj.currentPosition.coordinates.y);
     }
 
     @Test
     public void getPositionTest() {
+        int abritrary_posX = 1;
+        int abritrary_posY = 1;
         Character testObj = new Character();
         Position curPosition = testObj.getPosition();
-        assertEquals(1, curPosition.coordinates.x);
-        assertEquals(1, curPosition.coordinates.y);
+        assertEquals(abritrary_posX, curPosition.coordinates.x);
+        assertEquals(abritrary_posY, curPosition.coordinates.y);
     }
 
 }

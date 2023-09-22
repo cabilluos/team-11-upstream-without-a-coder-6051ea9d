@@ -9,13 +9,17 @@ public class Character {
     Position currentPosition; 
 
     public Character() {
+        int default_posX = 1;
+        int default_posY = 1;
         this.setName(DEFAULT_NAME);
-        currentPosition = new Position(1, 1);
+        currentPosition = new Position(default_posX, default_posY);
     }
 
     public Character(String lName) {
+        int default_posX = 1;
+        int default_posY = 1;
         this.setName(lName);
-        currentPosition = new Position(1, 1);
+        currentPosition = new Position(default_posX, default_posY);
     }
 
     public void setName(String lName){
