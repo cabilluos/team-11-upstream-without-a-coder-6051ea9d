@@ -34,4 +34,12 @@ public class GameControllerTest {
         assertNotNull(testObj.map);
         assertEquals(mockCharacter.STUBBED_NEW_POSITION.coordinates, mockCharacter.currentPosition.coordinates);
     }
+    @Test
+    public void numberOfPositions() {
+        GameController testObj = new GameController();
+        FakeCharacter mockCharacter = new FakeCharacter();
+        testObj.character = mockCharacter;
+        testObj.startGame();
+        assertEquals(testObj.map.getTotalPositions(), 100);
+    }
 }
