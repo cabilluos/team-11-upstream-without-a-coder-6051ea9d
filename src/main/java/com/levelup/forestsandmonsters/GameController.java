@@ -4,6 +4,7 @@ import java.awt.Point;
 
 public class GameController {
     Character character;
+    GameMap map = new GameMap(10,10);
     static final String DEFAULT_CHARACTER_NAME = "Character";
 
     public void move(DIRECTION directionToMove) {
@@ -47,9 +48,6 @@ public class GameController {
     }
 
     public void startGame() {
-        // TODO: Implement startGame - Should probably create tiles and put the character
-        // on them?
-        // TODO: Should also update the game results?
     }
 
     public GameStatus getStatus() {

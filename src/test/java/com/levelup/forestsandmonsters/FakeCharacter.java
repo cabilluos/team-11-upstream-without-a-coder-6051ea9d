@@ -6,7 +6,7 @@ import com.levelup.forestsandmonsters.GameController.DIRECTION;
 public class FakeCharacter extends Character {
     int moveCount;
     DIRECTION directionProvided;
-    Position STUBBED_NEW_POSITION = new Position(4,3);
+    Position STUBBED_NEW_POSITION = new Position(1,1);
     Position currentPosition = new Position(1,1);
     @Override
     public void move(DIRECTION direction) {
