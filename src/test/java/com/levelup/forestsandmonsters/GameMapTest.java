@@ -96,34 +96,72 @@ public class GameMapTest {
     }
 
     @Test 
-    public void shouldBeValidIsPositionValidTest() {
-        Position targetPosition = new Position(1, 1);
-        assertTrue(this.map.isPositionValid(targetPosition));
+    public void calculatePositionBonceNorthTest() {
+        // selecting a valid position x= 5 and y = 5 valid position
+        Position startingPosition = new Position(1, 0);
+        DIRECTION direction = DIRECTION.EAST;
+
+        // checking if the final position is the right one
+        Position calculatedPosition = this.map.calculatePosition(startingPosition, direction);
+        Position targetPosition = startingPosition;
+
+        // testing x axis
+        assertEquals(targetPosition.coordinates.x, calculatedPosition.coordinates.x);
+
+        // testing y axis
+        assertEquals(targetPosition.coordinates.y, calculatedPosition.coordinates.y);
+    }    
+
+    @Test 
+    public void calculatePositionBonceSouthTest() {
+        // selecting a valid position x= 10 and y = 11 valid position
+        Position startingPosition = new Position(10, 11);;
+        DIRECTION direction = DIRECTION.EAST;
+
+        // checking if the final position is the right one
+        Position calculatedPosition = this.map.calculatePosition(startingPosition, direction);
+        Position targetPosition = startingPosition;
+
+        // testing x axis
+        assertEquals(targetPosition.coordinates.x, calculatedPosition.coordinates.x);
+
+        // testing y axis
+        assertEquals(targetPosition.coordinates.y, calculatedPosition.coordinates.y);
     }
 
     @Test 
-    public void shouldFailIsPositionValidBonceNorthTest() {
-        Position targetPosition = new Position(1, 0);
-        assertFalse(this.map.isPositionValid(targetPosition));
-    }
+    public void calculatePositionBonceLeftTest() {
+        // selecting a valid position x= 0 and y = 1 valid position
+        Position startingPosition = new Position(0, 1);
+        DIRECTION direction = DIRECTION.WEST;
 
-    @Test 
-    public void shouldFailIsPositionValidBonceSouthTest() {
-        Position targetPosition = new Position(10, 11);
-        assertFalse(this.map.isPositionValid(targetPosition));
-    }
+        // checking if the final position is the right one
+        Position calculatedPosition = this.map.calculatePosition(startingPosition, direction);
+        Position targetPosition = startingPosition;
 
-    @Test 
-    public void shouldFailIsPositionValidBonceLeftTest() {
-        Position targetPosition = new Position(0, 1);
-        assertFalse(this.map.isPositionValid(targetPosition));
+        // testing x axis
+        assertEquals(targetPosition.coordinates.x, calculatedPosition.coordinates.x);
+
+        // testing y axis
+        assertEquals(targetPosition.coordinates.y, calculatedPosition.coordinates.y);
     }
     
     @Test 
-    public void shouldFailIsPositionValidBonceRightTest() {
-        Position targetPosition = new Position(11, 1);
-        assertFalse(this.map.isPositionValid(targetPosition));
-    } 
+    public void calculatePositionBonceRightTest() {
+        // selecting a valid position x= 11 and y = 1 valid position
+        Position startingPosition = new Position(11, 1);
+        DIRECTION direction = DIRECTION.EAST;
+
+        // checking if the final position is the right one
+        Position calculatedPosition = this.map.calculatePosition(startingPosition, direction);
+        Position targetPosition = startingPosition;
+
+        // testing x axis
+        assertEquals(targetPosition.coordinates.x, calculatedPosition.coordinates.x);
+
+        // testing y axis
+        assertEquals(targetPosition.coordinates.y, calculatedPosition.coordinates.y);
+    }
     
     @Test 
     public void validateGetTotalPositions() {        

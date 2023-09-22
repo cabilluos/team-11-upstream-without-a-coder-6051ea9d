@@ -60,10 +60,17 @@ public class GameMap {
             xCoordinates++;
         }
 
-        return new Position(xCoordinates, yCoordinates);
+        Position newPosition = new Position(xCoordinates, yCoordinates);
+        
+        if (this.isPositionValid(newPosition)) {
+            return newPosition;
+        } else {
+            return starPosition;
+        }        
+        
     }
 
-    public boolean isPositionValid(Position positionCoordinates) {
+    private boolean isPositionValid(Position positionCoordinates) {
         boolean result = true;
 
         if (positionCoordinates.coordinates.y < startYCoordinate) {
