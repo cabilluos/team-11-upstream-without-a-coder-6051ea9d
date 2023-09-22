@@ -30,9 +30,7 @@ public class GameController {
     GameStatus status;
 
     public GameController() {
-        status = new GameStatus();
-        // initialize the map
-        map = new GameMap(MAP_DEFAULT_X_DIMENSION,MAP_DEFAULT_Y_DIMENSION);
+        status = new GameStatus();        
     }
 
     // TODO: Ensure this AND CLI commands match domain model
@@ -54,6 +52,8 @@ public class GameController {
     }
 
     public void startGame() {
+        // initialize the map
+        map = new GameMap(MAP_DEFAULT_X_DIMENSION,MAP_DEFAULT_Y_DIMENSION);
     }
 
     public GameStatus getStatus() {
