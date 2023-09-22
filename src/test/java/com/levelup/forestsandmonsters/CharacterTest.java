@@ -21,6 +21,14 @@ public class CharacterTest {
     }
 
     @Test
+    public void InitializeNamedMapCharacter() {
+        String defaultCharacter = new String("Erin");
+        GameMap map = new GameMap(10, 10);
+        Character testObj = new Character(defaultCharacter, map);
+        assertNotNull(testObj);
+    }
+
+    @Test
     public void setPositionTest() {
         int arbitraryPosX = 4;
         int arbitraryPosY = 5;

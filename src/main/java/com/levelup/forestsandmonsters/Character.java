@@ -26,6 +26,14 @@ public class Character {
         currentPosition = new Position(defaultPosX, defaultPosY);
     }
 
+    public Character(String lName, GameMap lMap) {
+        int defaultPosX = 1;
+        int defaultPosY = 1;
+        this.setName(lName);
+        this.enterMap(lMap);
+        currentPosition = new Position(defaultPosX, defaultPosY);
+    }
+
     public void setName(String lName){
         name = lName;
     }
