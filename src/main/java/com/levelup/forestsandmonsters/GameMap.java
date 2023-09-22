@@ -41,22 +41,22 @@ public class GameMap {
         int yCoordinates = starPosition.coordinates.y;
 
         // calculate position to the north
-        if (DIRECTION.NORTH.equals(direction)/* && this.startYCoordinate != yCoordinates */) {
+        if (DIRECTION.NORTH.equals(direction)) {
             yCoordinates--;
         }
 
         // calculate position to the south
-        if (DIRECTION.SOUTH.equals(direction)/* && yDimension != yCoordinates */) {
+        if (DIRECTION.SOUTH.equals(direction)) {
             yCoordinates++;
         }
 
         // calculate position to the west
-        if (DIRECTION.WEST.equals(direction)/*&& this.startXCoordinate != xCoordinates*/) {
+        if (DIRECTION.WEST.equals(direction)) {
             xCoordinates--;
         }
 
         // calculate position to the east
-        if (DIRECTION.EAST.equals(direction)/* && xDimension != xCoordinates */) {
+        if (DIRECTION.EAST.equals(direction)) {
             xCoordinates++;
         }
 
