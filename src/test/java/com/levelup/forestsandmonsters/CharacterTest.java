@@ -56,6 +56,12 @@ public class CharacterTest {
         testObj.move(GameController.DIRECTION.NORTH);
     }
 
-        //assertEquals(GameController.DIRECTION.NORTH, curPosition.coordinates.x);
-
+    @Test
+    public void getMoveCountTest() {
+        Character testObj = new Character();
+        GameMap map = new GameMap(10,10);
+        testObj.enterMap(map);
+        int moveCount = testObj.getMoveCount();
+        assertEquals(0, testObj.getMoveCount());;
+    }
 }

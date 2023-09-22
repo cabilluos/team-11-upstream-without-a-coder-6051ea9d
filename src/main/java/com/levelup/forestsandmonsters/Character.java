@@ -10,6 +10,7 @@ public class Character {
     String name;
     Position currentPosition;
     private GameMap map;
+    private int moveCount = 0;
 
     public Character() {
         int defaultPosX = 1;
@@ -46,7 +47,7 @@ public class Character {
     }
 
     public int getMoveCount(){
-        return 5;
+        return moveCount;
     }
 
     public void move(DIRECTION direction) {
@@ -54,6 +55,6 @@ public class Character {
         System.out.println("Current positionY:"+currentPosition.coordinates.y);
         Position newPosition;
         newPosition = map.calculatePosition(currentPosition, direction);
-        //currentPosition = newPosition;
+        moveCount++;
     }
 }
