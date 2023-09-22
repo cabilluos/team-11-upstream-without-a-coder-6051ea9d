@@ -37,12 +37,14 @@ public class GameController {
     // TODO: Update this if it does not match your design
     public void createCharacter(String name) {
         if (name != null && !name.equals("")) {
-            status.characterName = name;
+            status.characterName = name;            
         } else {
-                status.characterName = DEFAULT_CHARACTER_NAME;
+            status.characterName = DEFAULT_CHARACTER_NAME;
         }
-    }
 
+        // initialize the character
+        this.character = new Character(status.characterName);        
+    }
 
     public void startGame() {
         // TODO: Implement startGame - Should probably create tiles and put the character
