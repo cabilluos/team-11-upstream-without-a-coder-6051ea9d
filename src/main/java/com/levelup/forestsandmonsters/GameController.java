@@ -3,9 +3,11 @@ package com.levelup.forestsandmonsters;
 import java.awt.Point;
 
 public class GameController {
-    Character character;
-    GameMap map = new GameMap(10,10);
+    Character character;    
     static final String DEFAULT_CHARACTER_NAME = "Character";
+
+    GameMap map;
+    int MAP_DEFAULT_X_DIMENSTION = 10, MAP_DEFAULT_Y_DIMENSTION = 10;
 
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
@@ -27,6 +29,8 @@ public class GameController {
 
     public GameController() {
         status = new GameStatus();
+        // initialize the map
+        map = new GameMap(MAP_DEFAULT_X_DIMENSTION,MAP_DEFAULT_Y_DIMENSTION);
     }
 
     // TODO: Ensure this AND CLI commands match domain model
@@ -69,3 +73,4 @@ public class GameController {
     }
 
 }
+
