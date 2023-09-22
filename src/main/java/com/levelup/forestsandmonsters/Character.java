@@ -2,12 +2,14 @@ package com.levelup.forestsandmonsters;
 import com.levelup.forestsandmonsters.Position;
 import com.levelup.forestsandmonsters.GameController.DIRECTION;
 import com.levelup.forestsandmonsters.GameController;
+import com.levelup.forestsandmonsters.GameMap;
 
 public class Character {
 
     public static String DEFAULT_NAME = "Bob";
     String name;
-    Position currentPosition; 
+    Position currentPosition;
+    private GameMap map;
 
     public Character() {
         int defaultPosX = 1;
@@ -39,11 +41,19 @@ public class Character {
         return currentPosition;
     }
 
-    public void move(DIRECTION direction) {
-        
+    public void enterMap(GameMap lMap){
+        map = lMap;
     }
 
-    public int getMoveCount() {
+    public int getMoveCount(){
         return 5;
+    }
+
+    public void move(DIRECTION direction) {
+        System.out.println("Current positionX:"+currentPosition.coordinates.x);
+        System.out.println("Current positionY:"+currentPosition.coordinates.y);
+        Position newPosition;
+        newPosition = map.calculatePosition(currentPosition, direction);
+        //currentPosition = newPosition;
     }
 }
