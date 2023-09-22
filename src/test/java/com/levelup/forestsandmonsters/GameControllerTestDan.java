@@ -2,7 +2,6 @@ package com.levelup.forestsandmonsters;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.mockito.Mockito.when;
 
 import java.awt.Point;
 
@@ -56,5 +55,11 @@ public class GameControllerTestDan extends GameControllerTest {
         // set the position of the charecter
         this.controller.setCharacterPosition(new Point(1, 1));
         assertNotNull(this.controller.character.currentPosition);
+    }
+
+    @Test
+    public void getTotalPositionsTest() {
+        int defaultTotalPositions = this.controller.MAP_DEFAULT_X_DIMENSION * this.controller.MAP_DEFAULT_Y_DIMENSION;        
+        assertEquals(this.controller.getTotalPositions(),  defaultTotalPositions);
     }
 }

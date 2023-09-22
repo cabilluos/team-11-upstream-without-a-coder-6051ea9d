@@ -9,7 +9,7 @@ public class GameController {
     int moveCount = 0;
 
     GameMap map;
-    int MAP_DEFAULT_X_DIMENSTION = 10, MAP_DEFAULT_Y_DIMENSTION = 10;
+    int MAP_DEFAULT_X_DIMENSION = 10, MAP_DEFAULT_Y_DIMENSION = 10;
 
     public void move(DIRECTION directionToMove) {
         // TODO: Implement move - should call something on another class
@@ -32,7 +32,7 @@ public class GameController {
     public GameController() {
         status = new GameStatus();
         // initialize the map
-        map = new GameMap(MAP_DEFAULT_X_DIMENSTION,MAP_DEFAULT_Y_DIMENSTION);
+        map = new GameMap(MAP_DEFAULT_X_DIMENSION,MAP_DEFAULT_Y_DIMENSION);
     }
 
     // TODO: Ensure this AND CLI commands match domain model
@@ -77,9 +77,7 @@ public class GameController {
     }
 
     public int getTotalPositions() {
-        // TODO: IMPLEMENT THIS TO GET THE TOTAL POSITIONS FROM THE MAP -- exists to be
-        // testable
-        return -10;
+        return this.map.getTotalPositions();
     }
 
 }
