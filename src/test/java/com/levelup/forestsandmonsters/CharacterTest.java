@@ -20,22 +20,22 @@ public class CharacterTest {
 
     @Test
     public void setPositionTest() {
-        int arbitrary_posX = 4;
-        int arbitrary_posY = 5;
+        int arbitraryPosX = 4;
+        int arbitraryPosY = 5;
         Character testObj = new Character();
-        testObj.setPosition(arbitrary_posX,arbitrary_posY);
-        assertEquals(arbitrary_posX, testObj.currentPosition.coordinates.x);
-        assertEquals(arbitrary_posY, testObj.currentPosition.coordinates.y);
+        testObj.setPosition(arbitraryPosX,arbitraryPosY);
+        assertEquals(arbitraryPosX, testObj.currentPosition.coordinates.x);
+        assertEquals(arbitraryPosY, testObj.currentPosition.coordinates.y);
     }
 
     @Test
     public void getPositionTest() {
-        int abritrary_posX = 1;
-        int abritrary_posY = 1;
+        int abritraryPosX = 1;
+        int abritraryPosY = 1;
         Character testObj = new Character();
         Position curPosition = testObj.getPosition();
-        assertEquals(abritrary_posX, curPosition.coordinates.x);
-        assertEquals(abritrary_posY, curPosition.coordinates.y);
+        assertEquals(abritraryPosX, curPosition.coordinates.x);
+        assertEquals(abritraryPosY, curPosition.coordinates.y);
     }
 
 }
