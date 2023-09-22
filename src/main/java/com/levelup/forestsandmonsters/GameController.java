@@ -6,6 +6,8 @@ public class GameController {
     Character character;    
     static final String DEFAULT_CHARACTER_NAME = "Character";
 
+    int moveCount = 0;
+
     GameMap map;
     int MAP_DEFAULT_X_DIMENSTION = 10, MAP_DEFAULT_Y_DIMENSTION = 10;
 
@@ -59,7 +61,15 @@ public class GameController {
     }
 
     public void setCharacterPosition(Point coordinates) {
-        // TODO: IMPLEMENT THIS TO SET CHARACTERS CURRENT POSITION -- exists to be testable
+        if (this.character == null) {
+            this.character = new Character();
+        }
+        // set the pass position into the status
+        this.character.currentPosition = new Position(coordinates.x, coordinates.y);;
+
+        // update the status information
+        this.status.currentPosition = coordinates;
+        this.status.moveCount = 0;
     }
 
     public void setCurrentMoveCount(int moveCount) {

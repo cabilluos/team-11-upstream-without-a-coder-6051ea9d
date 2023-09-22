@@ -4,6 +4,8 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.when;
 
+import java.awt.Point;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -43,5 +45,16 @@ public class GameControllerTestDan extends GameControllerTest {
         assertEquals(characterName, this.controller.status.characterName);
         // check the character name
         assertEquals(characterName, this.controller.character.name);
+    }
+
+    @Test
+    public void setCharacterPositionTest() {        
+        String characterName = "Mad Randy";
+        // intialize a character
+        this.controller.createCharacter(characterName);
+
+        // set the position of the charecter
+        this.controller.setCharacterPosition(new Point(1, 1));
+        assertNotNull(this.controller.character.currentPosition);
     }
 }
