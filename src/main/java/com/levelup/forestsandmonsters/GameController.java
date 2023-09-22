@@ -6,6 +6,14 @@ public class GameController {
     Character character;
     static final String DEFAULT_CHARACTER_NAME = "Character";
 
+    public void move(DIRECTION directionToMove) {
+        // TODO: Implement move - should call something on another class
+        // TODO: Should probably also update the game results
+        character.move(directionToMove);
+        this.status.currentPosition = character.getPosition().coordinates;
+        this.status.moveCount = character.getMoveCount();
+    }
+
     public class GameStatus {
         // TODO: Add other status data
         public String characterName;
@@ -31,9 +39,10 @@ public class GameController {
         if (name != null && !name.equals("")) {
             status.characterName = name;
         } else {
-            status.characterName = DEFAULT_CHARACTER_NAME;
+                status.characterName = DEFAULT_CHARACTER_NAME;
         }
     }
+
 
     public void startGame() {
         // TODO: Implement startGame - Should probably create tiles and put the character
@@ -43,16 +52,6 @@ public class GameController {
 
     public GameStatus getStatus() {
         return this.status;
-    }
-
-    public void move(DIRECTION directionToMove) {
-        // TODO: Implement move - should call something on another class
-        // TODO: Should probably also update the game results
-        character.move(directionToMove);
-        this.status.currentPosition = character.getPosition().coordinates;
-        this.status.moveCount = character.getMoveCount();
-        }
-
     }
 
     public void setCharacterPosition(Point coordinates) {

@@ -1,5 +1,6 @@
 package com.levelup.forestsandmonsters;
 import com.levelup.forestsandmonsters.Position;
+import com.levelup.forestsandmonsters.GameController.DIRECTION;
 import com.levelup.forestsandmonsters.GameController;
 
 public class Character {
@@ -38,4 +39,11 @@ public class Character {
         return currentPosition;
     }
 
+    public void move(DIRECTION direction) {
+        
+    }
+
+    public int getMoveCount() {
+        return 5;
+    }
 }
